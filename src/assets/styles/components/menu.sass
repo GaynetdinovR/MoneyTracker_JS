@@ -1,0 +1,104 @@
+.menu
+    background-color: $blue
+
+    padding: 50px 25px
+    border-radius: 15px
+    min-width: 310px
+
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+
+    &__add-payment,
+    &__settings,
+    &__wallet
+        background-color: $dark-grey
+        border: none
+
+        border-radius: 10px
+
+        cursor: pointer
+        transition: 200ms
+
+        &:hover
+            filter: brightness(0.75)
+
+    &__add-payment
+        min-width: 100%
+
+        position: relative
+        z-index: 0
+
+        padding: 45px 60px
+
+        @include font($fz: 18px, $fw: 700)
+
+        & span
+            z-index: 2
+            position: relative
+
+        & img
+            max-width: 100%
+            height: 100%
+            object-fit: contain
+
+            position: absolute
+
+            z-index: 1
+            left: 0
+            top: 0
+
+    &__settings
+        width: 140px
+        margin-bottom: 60px
+        padding: 10px 40px
+
+        & img
+            max-width: 100%
+            height: 100%
+            object-fit: contain
+
+    &__wallet
+
+        margin-bottom: 60px
+        padding: 20px 25px
+        min-width: 100%
+
+        &.decorative
+            margin-bottom: 0
+            width: 350px
+            cursor: default
+            min-width: 0
+
+            &:hover
+                filter: brightness(1)
+
+        &-bottom,
+        &-top
+            display: flex
+            justify-content: space-between
+            align-items: center
+
+        &-card-date
+            @include font($fz: 16px, $fw: 500)
+
+        &-top
+            margin-bottom: 20px
+
+        &-card-number
+            @include font($fz: 16px, $fw: 500)
+
+        &-img
+            width: 32px
+
+            & img
+                max-width: 100%
+                height: 100%
+                object-fit: contain
+
+        &-name
+            @include font($fz: 20px, $fw: 700)
+
+        &-sum
+            @include font($fz: 20px, $fw: 700)

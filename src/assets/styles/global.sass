@@ -1,0 +1,136 @@
+body
+    background-color: $dark-grey
+    font-family: $font
+
+    padding: 100px 50px 
+
+    overflow: hidden
+
+main
+    display: flex
+    justify-content: center
+    align-items: flex-start
+
+.grid-menu
+
+    &__btn
+        border-width: 3px
+        border-style: solid
+        border-radius: 10px
+
+        width: 60px
+        height: 60px
+        
+        padding: 10px
+        margin-right: 40px
+
+        cursor: pointer
+        transition: 200ms
+
+        & img
+            max-width: 100%
+            object-fit: contain
+
+        &:hover
+            filter: brightness(0.75)
+
+        &:focus
+            outline: none
+
+
+    &__content
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        grid-template-rows: repeat(3, 1fr)
+        grid-gap: 5px
+
+        padding: 10px
+        border-radius: 10px
+
+        z-index: 3
+        position: absolute
+        left: 25%
+        top: 46%
+
+        &.active
+            display: grid
+
+    &__wrap
+        width: 100vw
+        height: 100vh
+
+        position: absolute
+        z-index: 2
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+
+        display: none
+
+        &.active
+            display: block
+
+    &__element
+        border: none
+        border-radius: 5px
+
+        width: 45px
+        padding: 5px
+
+        display: flex
+        justify-content: center
+        align-items: center
+
+        cursor: pointer
+        transition: 100ms
+
+        & img
+            max-width: 100%
+            object-fit: contain
+
+        &:hover
+            filter: brightness(0.75)
+
+
+.modal
+    border-radius: 15px
+
+    position: relative
+
+    &-wrap
+        width: 100vw
+        height: 100vh
+
+        position: fixed
+        top: 0
+        left: 0
+        z-index: 2
+        
+        background: rgba($black, 0.4)
+
+        display: none
+        justify-content: center
+        align-items: center
+
+        &.active
+            display: flex
+    
+    &__close
+        width: 48px
+
+        position: absolute
+        top: 30px
+        right: 30px
+
+        cursor: pointer
+
+        &:hover
+            filter: brightness(0.8)
+
+        & img
+            max-width: 100%
+            height: 100%
+            object-fit: contain
+
+    &__title
+        @include font($fz:35px, $fw: 700)

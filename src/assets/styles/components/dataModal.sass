@@ -1,0 +1,120 @@
+.date-modal
+    &__calendar
+        background: $dark-grey
+        color: $white
+
+        border-radius: 10px
+        border: 3px solid $blue
+
+        & button
+            font-family: $font
+            font-size: 15px
+
+        & button:not(.react-calendar__month-view__days__day--weekend)
+            color: $white
+
+        & button:disabled
+            background-color: rgba($black, 0.4)
+            filter: brightness(0.3)
+
+        & button:disabled:hover
+            background-color: rgba($black, 0.4)
+            filter: brightness(0.3)
+
+        & .react-calendar__tile:hover
+            background-color: rgba($black, 0.3)
+
+        & .react-calendar__tile--hover
+            background-color: rgba($black, 0.3)
+
+        & .react-calendar__tile:focus
+            background-color: rgba($blue, 0.7)
+
+        & .react-calendar__tile--now
+            background-color: rgba($yellow, 0.7)
+
+    & .modal
+        width: 600px
+        height: 550px
+
+        background: $dark-grey
+
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        flex-direction: column
+
+    &__choosed-date
+        margin: 0 0 20px
+
+        @include font($fz: 18px)
+
+    &__operation
+        height: 45px
+        width: 45px
+        padding: 10px
+        border-radius: 10px
+
+        font-size: 22px
+        font-weight: 500
+        text-align: center
+
+        position: relative
+
+        border: 3px solid $blue
+        background: rgba($blue, 0.1)
+
+        appearance: none
+
+        cursor: pointer
+        
+        @include font($fz: 18px)
+
+        & option
+            color: $black
+            font-size: 20px
+
+        &:focus
+            outline: none
+
+    &__btn
+        border: none
+        background: $blue
+
+        border-radius: 10px
+        padding: 20px 0
+        
+        width: 200px
+
+        cursor: pointer
+        transition: 200ms
+
+        @include font($fz: 20px)
+
+        &:hover
+            filter: brightness(0.75)
+
+    &__bottom-side
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+        margin: 20px
+
+        width: calc(100% - 250px)
+
+.react-calendar__navigation
+    & button:disabled
+        background-color: rgba($black, 0.4)
+        filter: brightness(0.3)
+
+    & button:disabled:hover
+        background-color: rgba($black, 0.4)
+        filter: brightness(0.3)
+
+    & button:hover
+        background-color: rgba($black, 0.3)
+        
+:where(abbr[title])
+    text-decoration: underline
+    

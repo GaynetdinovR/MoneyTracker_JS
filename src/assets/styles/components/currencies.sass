@@ -1,0 +1,25 @@
+.currencies
+    display: inline-flex
+    justify-content: center
+    align-items: center
+
+    &__label
+        margin-right: 15px
+        
+        @include font($fz: 22px, $fw: 700)
+
+    & .grid-menu__btn
+        border-color: $blue
+        background: rgba($blue, 0.1)
+
+        @include font($fz: 28px)
+
+    & .grid-menu__content
+        background: $blue
+
+        transform: translate(165%, 20%)
+
+    & .grid-menu__element
+        background: $dark-grey
+
+        @include font($fz: 28px)

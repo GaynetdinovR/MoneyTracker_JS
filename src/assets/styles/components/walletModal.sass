@@ -1,0 +1,99 @@
+.wallet-modal
+
+    & .modal
+        width: 800px
+        height: 640px
+
+        background: $dark-grey
+
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        flex-direction: column
+
+    &__wrap
+        padding: 15px
+        border-radius: 10px
+        margin: 10px
+        min-width: 650px
+
+        background: $blue
+
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+
+    &__tools
+        display: flex
+        align-items: center
+
+    &__tool
+        width: 48px
+        margin: 0 5px
+
+        background: transparent
+        border: none
+
+        cursor: pointer
+
+        &:hover
+            filter: invert(0.2)
+
+        & img
+            max-width: 100%
+            height: 100%
+            object-fit: contain
+
+        &:disabled:hover
+            filter: invert(0)
+
+    &__tool:last-child
+        margin-right: 0
+
+    &__add-wallet
+        width: 350px
+        height: 100px
+        border-radius: 10px
+
+        border: none
+        background: $dark-grey
+
+        display: flex
+        justify-content: center
+        align-items: center
+
+        transition: 200ms
+        cursor: pointer
+
+        & img
+            max-width: 64px
+
+        &:hover
+            filter: brightness(0.75)
+
+    &__wallet
+        padding: 20px 25px
+        width: 350px
+        height: 100px
+        border-radius: 10px
+
+        background-color: $dark-grey
+        border: none
+
+        &-name,
+        &-balance
+            @include font($fz: 20px, $fw: 700)
+
+        &-card-date,
+        &-card-number
+            @include font($fz: 16px, $fw: 500)
+
+        &-bottom,
+        &-top
+            display: flex
+            justify-content: space-between
+            align-items: center
+
+        &-top
+            margin-bottom: 20px
