@@ -1,4 +1,4 @@
-# Durak_JS
+# Money Tracker
 Money Tracker - Веб-приложение для отслеживания доходов
 
 ## Стек технологий
@@ -13,7 +13,7 @@ Money Tracker - Веб-приложение для отслеживания до
 + Клонировать проект
 
 ```
-git clone https://github.com/GaynetdinovR/Durak_JS.git
+git clone https://github.com/GaynetdinovR/MoneyTracker_JS.git
 ```
 
 + Установить необходимые пакеты
